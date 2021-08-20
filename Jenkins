@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+	stage('GitCheckout') {
+            steps {
+               git 'https://github.com/Workout01/Project1.git'
+            }
+        }
+        stage('Build') {
+
+            steps {
+                echo "Build application"
+            }
+        }
+	stage('Deploy') {
+            steps {
+               echo "testing application"
+            }
+        }
+  }
+}
